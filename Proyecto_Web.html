@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Gestión y Monitoreo Ambiental OpenAQ</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Material Icons opcionales para iconos de interfaz -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+  <!-- Barra Superior / Header -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="material-icons menu-icon">menu</span>
+      <h1>Plataforma de Gestión y Monitoreo Ambiental OpenAQ </h1>
+    </div>
+    <div class="topbar-right">
+      <span class="material-icons badge-icon" data-badge="1">notifications</span>
+      <span class="material-icons account-icon">account_circle</span>
+    </div>
+  </header>
+
+  <!-- Contenedor Principal del Dashboard -->
+  <div class="dashboard-container">
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li class="active"><span class="material-icons">dashboard</span> Dashboard</li>
+          <li><span class="material-icons">show_chart</span> Gráfico en línea</li>
+          <li><span class="material-icons">view_module</span> Tarjetas de los...</li>
+          <li><span class="material-icons">equalizer</span> Valores actuales</li>
+          <li><span class="material-icons">list_alt</span> Tablas de datos</li>
+          <li><span class="material-icons">warning</span> Alertas Activas</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido Central -->
+    <main class="main-content">
+      
+      <!-- Seccion Superior: Cards Resumen -->
+      <section class="dashboard-cards">
+        <div class="card">
+          <p class="card-title">Total de Dispositivos </p>
+          <p class="card-value">145</p>
+        </div>
+        <div class="card">
+          <p class="card-title">Promedio Global del Aire <span class="info-icon">i</span></p>
+          <p class="card-value text-green">52 <span class="unit">índice</span></p>
+        </div>
+        <div class="card">
+          <p class="card-title">Alertas Activas </p>
+          <p class="card-value text-red"><span class="material-icons">error</span> 0</p>
+        </div>
+      </section>
+
+      <!-- Espacio Reservado para Mapa -->
+      <section class="map-container">
+        <div class="map-placeholder">
+          <span class="material-icons map-icon">public</span>
+          <p>[ Espacio reservado para integración con Google Maps / OpenAQ ]</p>
+        </div>
+      </section>
+
+      <!-- Tabla de Dispositivos -->
+      <section class="table-container">
+        <div class="table-header">
+          <h3>TABLA DE DISPOSITIVOS IoT </h3>
+          <div class="table-controls">
+            <input type="text" placeholder="Filtra..." disabled>
+            <span class="material-icons">filter_list</span>
+          </div>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Device ID</th>
+              <th>Ubicación</th>
+              <th>Sensor</th>
+              <th>Última Transmisión </th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WOKWI_ESP32_01</td>
+              <td>Quito, Ecuador</td>
+              <td>DHT22</td>
+              <td>21/07/2023 10:32:11</td>
+              <td><span class="status-dot online"></span> Activo</td>
+            </tr>
+            <tr>
+              <td>WOKWI_ESP32_02</td>
+              <td>Quito, Ecuador</td>
+              <td>DHT22</td>
+              <td>21/07/2023 11:32:15</td>
+              <td><span class="status-dot online"></span> Activo</td>
+            </tr>
+            <tr>
+              <td>WOKWI_ESP32_03</td>
+              <td>Quito, Ecuador</td>
+              <td>DHT22</td>
+              <td>21/07/2023 11:32:33</td>
+              <td><span class="status-dot online"></span> Activo</td>
+            </tr>
+            <tr>
+              <td>WOKWI_ESP32_04</td>
+              <td>Quito, Ecuador</td>
+              <td>DHT22</td>
+              <td>21/07/2023 11:32:37</td>
+              <td><span class="status-dot online"></span> Activo</td>
+            </tr>
+          </tbody>
+        </table>
+        <footer class="footer-note">
+          Powered by OpenAQ Data and Wokwi Virtual Devices (see architecture diagram)
+        </footer>
+      </section>
+    </main>
+
+    <!-- Panel Lateral Derecho (Detalles de la Ubicación) -->
+    <aside class="detail-panel">
+      <div class="detail-header">
+        <h2>DETALLES DE LA UBICACIÓN</h2>
+        <span class="close-btn">&times;</span>
+      </div>
+
+      <div class="detail-section">
+        <strong>UBICACIÓN:</strong>
+        <p>Quito, Ecuador</p>
+        <small>Simulación Wokwi </small>
+      </div>
+
+      <div class="detail-section">
+        <strong>PROVEEDOR:</strong>
+        <p>Red Nacional de Aire</p>
+      </div>
+
+      <div class="detail-section">
+        <strong>TIPO DE ESTACIÓN:</strong>
+        <p>Simulación Wokwi </p>
+      </div>
+
+      <div class="detail-section">
+        <strong>SENSORES DISPONIBLES:</strong>
+        <ul>
+          <li>Temperatura (DHT22)</li>
+          <li>Humedad (DHT22)</li>
+          <li>Calidad del Aire (Multi)</li>
+        </ul>
+      </div>
+
+      <div class="detail-section charts-section">
+        <strong>GRÁFICOS RESUMIDOS (Histórico 24h):</strong>
+        
+        <!-- Mockups visuales de gráficos con CSS -->
+        <div class="chart-box">
+          <p class="chart-title">Temperatura (DHT22)</p>
+          <div class="bar-chart-mockup">
+            <div style="height: 60%"></div>
+            <div style="height: 80%"></div>
+            <div style="height: 45%"></div>
+            <div style="height: 90%"></div>
+            <div style="height: 70%"></div>
+            <div style="height: 85%"></div>
+            <div style="height: 50%"></div>
+          </div>
+        </div>
+
+        <div class="chart-box">
+          <p class="chart-title">Humedad (DHT22)</p>
+          <div class="line-chart-mockup">
+            <svg viewBox="0 0 100 30" preserveAspectRatio="none">
+              <path d="M0 20 Q 25 5, 50 18 T 100 10" fill="none" stroke="#2b6cb0" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="chart-box">
+          <p class="chart-title">Calidad del Aire (Multi)</p>
+          <div class="bar-chart-mockup multi-color">
+            <div style="height: 40%"></div>
+            <div style="height: 60%"></div>
+            <div style="height: 55%"></div>
+            <div style="height: 75%"></div>
+            <div style="height: 90%"></div>
+            <div style="height: 65%"></div>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+  </div>
+
+</body>
+</html>

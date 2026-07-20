@@ -1,0 +1,315 @@
+/* Reseteo básico y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header / Topbar */
+.topbar {
+  background-color: #2c3e50;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 50px;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-left h1 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Layout del Dashboard */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 200px 1fr 300px;
+  flex: 1;
+  height: calc(100vh - 50px);
+}
+
+/* Sidebar Izquierdo */
+.sidebar {
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 12px 15px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.sidebar li.active, .sidebar li:hover {
+  background-color: #2980b9;
+}
+
+.sidebar .material-icons {
+  font-size: 18px;
+}
+
+/* Contenido Principal */
+.main-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+}
+
+/* Targetas de Métricas */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.card-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.text-green { color: #2e7d32; }
+.text-red { color: #c62828; display: flex; align-items: center; gap: 5px; }
+
+.unit {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #666;
+}
+
+.info-icon {
+  display: inline-block;
+  border: 1px solid #777;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 13px;
+  color: #777;
+}
+
+/* Espacio Reservado para Mapa */
+.map-container {
+  background-color: #e3edf7;
+  border: 2px dashed #90caf9;
+  border-radius: 4px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-placeholder {
+  text-align: center;
+  color: #1565c0;
+}
+
+.map-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+/* Tabla de Datos */
+.table-container {
+  background: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.table-header h3 {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.table-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.table-controls input {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.data-table th, .data-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  background-color: #fafafa;
+  color: #666;
+}
+
+.status-dot {
+  height: 8px;
+  width: 8px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.footer-note {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: #777;
+  text-align: center;
+}
+
+/* Panel Lateral Derecho (Detalles) */
+.detail-panel {
+  background-color: #fff;
+  border-left: 1px solid #e0e0e0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.detail-header h2 {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.close-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.detail-section strong {
+  font-size: 0.75rem;
+  color: #2c3e50;
+  display: block;
+}
+
+.detail-section p {
+  font-size: 0.85rem;
+}
+
+.detail-section small {
+  font-size: 0.7rem;
+  color: #777;
+}
+
+.detail-section ul {
+  font-size: 0.8rem;
+  margin-left: 18px;
+  margin-top: 4px;
+}
+
+/* Mockups de Gráficos CSS */
+.charts-section {
+  margin-top: 10px;
+}
+
+.chart-box {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.chart-title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.bar-chart-mockup {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2px;
+}
+
+.bar-chart-mockup div {
+  flex: 1;
+  background-color: #2b6cb0;
+}
+
+.bar-chart-mockup.multi-color div:nth-child(even) { background-color: #dd6b20; }
+.bar-chart-mockup.multi-color div:nth-child(odd) { background-color: #319795; }
+
+.line-chart-mockup svg {
+  width: 100%;
+  height: 40px;
+}
