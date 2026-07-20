@@ -17,4 +17,4 @@ Este proyecto es una interfaz web de maquetado para un Dashboard de Monitoreo Am
 
 ## Publicación
 El proyecto se encuentra publicado en GitHub Pages en el siguiente enlace:
-git@github.com:Fernando-Villa/Proyecto_Borrador_Pagina_Web.git
+https://github.com/Fernando-Villa/Proyecto_Borrador_Pagina_Web.git
